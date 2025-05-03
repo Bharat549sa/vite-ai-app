@@ -8,7 +8,30 @@ import {
   
   // modify the interface with any CRUD methods
   // you might need
-  
+  // Define the types used in the interface
+interface User {
+  id: number;
+  username: string;
+  email: string;
+  // Add other user properties as needed
+}
+
+interface InsertUser {
+  username: string;
+  email: string;
+  // Add other properties needed for user creation
+}
+
+interface FitnessGoal {
+  id: number;
+  userId: number;
+  // Add other fitness goal properties
+}
+
+interface InsertFitnessGoal {
+  userId: number;
+  // Add other properties needed for fitness goal creation
+}
   export interface IStorage {
     // User management
     getUser(id: number): Promise<User | undefined>;
